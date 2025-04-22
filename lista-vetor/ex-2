@@ -1,0 +1,31 @@
+/*
+
+Leia um vetor de reais (positivos ou nulos) e o escreva. A seguir,
+substitua os valores iguais a zero por -99 e escreva novamente o vetor.
+
+*/
+
+#include<stdio.h>
+
+int main(){
+
+    float v[5];
+
+    printf("Digite 5 Numeros inteiros ou nulos:\n");{
+        for(int i = 0; i < 5; i++){
+            scanf("%f",&v[i]);
+        }
+    }
+
+        for(int i = 0; i < 5; i++){
+            if(v[i] == 0 ){
+
+                v[i] = -99;
+
+            }
+        }
+        for(int i = 0; i < 5 ; i++){
+        printf("%.2f ", v[i]);
+}
+
+}
