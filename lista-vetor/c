@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main(){
+
+    int v[10], num, cont;
+
+    printf("Digite 10 Numeros");{
+        for(int i = 0; i < 10; i++){
+            scanf("%d",&v[i]);
+        }
+    }
+
+    
+    printf("Escolha uma numero para ver quantas vezes ele aparece:\n");
+        scanf("%d",&num);
+
+    for(int i= 0 ; i < 10 ; i++){
+        if(v[i] == num){
+            cont++;
+        }
+    }
+
+
+    printf("O num escolhida foi:%d\n O valor aparece: %d", num, cont);
+
+
+}
