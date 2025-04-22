@@ -1,0 +1,43 @@
+/*
+
+
+Leia um conjunto de 50 valores, coloque-os em 2 vetores
+classificando-os como pares ou ímpares. Imprimir os 2 vetores
+
+*/
+
+#include<stdio.h>
+
+int main(){
+
+int num[51],pares[25], impares[25];
+
+    for(int i= 0; i <= 50; i++){
+        num[i] = i;
+    }
+
+    for(int i = 0 ; i< 25; i++){
+        
+        if(num[i] %2 == 0){
+            pares[i] = num[i];
+            printf("%d ", pares[i]);
+        }
+    }
+    
+    printf("\n");
+    
+    for(int i = 0 ; i<= 25; i++){
+        if(num[i] %2 == 0){
+        
+        }                  
+
+        else{
+
+            impares[i] = num[i];
+            printf("%d ", impares[i]);
+        }
+    }
+}
+    
+
+
