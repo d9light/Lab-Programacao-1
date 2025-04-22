@@ -1,0 +1,36 @@
+/*
+
+Leia um vetor de 10 posições e mostre-o. A seguir, troque o primeiro
+elemento com o último, o segundo com o penúltimo, o terceiro com o
+antepenúltimo, e assim sucessivamente. Mostre o vetor após a troca
+
+*/
+
+#include<stdio.h>
+
+#define tam 10
+
+int main(){
+
+int num[10],num2[10];
+
+    for(int i= 0; i < tam; i++){
+        scanf("%d",&num[i]);
+    }
+        
+    for(int i = 0; i < tam ; i++){
+        printf("%d", num[i]);
+     }
+
+    for (int i = 9; i != 0 ; i--){
+        for (int j = 0; j < tam ; i++){
+
+                    num2[j] = num[i];   
+
+        }
+    }
+    
+        for(int i = 0; i < tam ; i++){
+        printf("%d", num2[i]);
+     }
+}
