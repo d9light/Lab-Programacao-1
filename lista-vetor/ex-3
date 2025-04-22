@@ -1,0 +1,34 @@
+/*
+
+Leia um vetor de inteiros e o escreva. A seguir, apresente o menor
+valor, juntamente com sua posição no vetor.
+
+*/
+
+#include<stdio.h>
+
+int main(){
+
+    int v[5], pos; 
+
+    printf("Digite 5 Numeros inteiros:\n");{
+        for(int i = 0; i < 5; i++){
+            scanf("%d",&v[i]);
+        }
+    }
+        int menor = v[0];
+        for(int i=0 ; i < 5; i++){
+        if(v[i]< menor){
+            menor = v[i];
+            pos = i;
+        }
+        
+
+    }
+
+
+    printf("Menor numero:%d\n", menor);
+    printf("Posição do numero:%d", pos +1);
+
+
+}
