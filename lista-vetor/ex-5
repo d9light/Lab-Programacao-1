@@ -8,29 +8,37 @@ antepenúltimo, e assim sucessivamente. Mostre o vetor após a troca
 
 #include<stdio.h>
 
-#define tam 10
+
 
 int main(){
 
-int num[10],num2[10];
+    int num[10],num2[10],j = 0;
 
-    for(int i= 0; i < tam; i++){
+    printf("Enter 10 numbers\n");
+    for(int i= 0; i < 10; i++){
         scanf("%d",&num[i]);
     }
-        
-    for(int i = 0; i < tam ; i++){
-        printf("%d", num[i]);
-     }
 
-    for (int i = 9; i != 0 ; i--){
-        for (int j = 0; j < tam ; i++){
+    printf("Antes: ");
 
-                    num2[j] = num[i];   
+    for(int i = 0; i < 10 ; i++){
 
-        }
+        printf("%d ", num[i]);
+
     }
-    
-        for(int i = 0; i < tam ; i++){
-        printf("%d", num2[i]);
-     }
+
+    for (int i = 9; i >= 0 ; i--){
+
+
+            num2[j] = num[i];
+            j+=1;
+
+    }
+    printf("\n");
+    printf("Depois: ");
+    for(int i = 0; i < 10 ; i++){
+        printf("%d ", num2[i]);
+
+    }
+
 }
