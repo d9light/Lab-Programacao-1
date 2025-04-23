@@ -32,9 +32,9 @@ int main() {
     float n1,n2,n3;
     float media = 0;
 
-    printf("Digite 20 numeros, para retornar o maior:\n");
+    printf("Calcule sua media:\n");
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i <= 10; i++) {
         printf("Digite sua matricula: ");
         scanf("%d", &m);
 
