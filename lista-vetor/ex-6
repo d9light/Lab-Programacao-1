@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+void ordenarVetor(int *v, int tamanho) {
+    for (int i = 0; i < tamanho - 1; i++) {
+        for (int j = 0; j < tamanho - i - 1; j++) {
+            if (v[j] < v[j + 1]) { // Troca se estiver em ordem errada (decrescente)
+                int temp = v[j];
+                v[j] = v[j + 1];
+                v[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int a[10], b[10], c[20], j = 0;
+
+    printf("Entre com 10 numeros (A):\n");
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    printf("Entre com 10 numeros (B):\n");
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &b[i]);
+    }
+
+    printf("A: ");
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", a[i]);
+    }
+
+    printf("\nB: ");
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", b[i]);
+    }
+
+    // Unindo A e B em C
+    for (int i = 0; i < 20; i++) {
+        if (i < 10) {
+            c[i] = a[i];
+        } else {
+            c[i] = b[j];
+            j++;
+        }
+    }
+
+    printf("\nAntes : ");
+    for (int i = 0; i < 20; i++) {
+        printf("%d ", c[i]);
+    }
+
+    ordenarVetor(c, 20); // Ordena C em ordem decrescente
+
+    printf("\nDepois: ");
+    for (int i = 0; i < 20; i++) {
+        printf("%d ", c[i]);
+    }
+
+}
