@@ -1,0 +1,49 @@
+/*
+leia valores para uma matriz inteira (5, 5) e imprima toda a
+matriz e uma outra matriz formada pelos números que se
+encontram em posições cujo índice da linha mais o da coluna
+formam um número par.
+
+*/
+
+#include<stdio.h>
+
+
+int main(){
+
+int num[5][5];
+int soma;
+
+    for(int i = 0; i < 5 ; i++){
+        for(int j = 0; j < 5 ; j++){
+
+            num[i][j] = i * 2 +j;
+        }
+    }
+       for(int i = 0; i < 5 ; i++){
+        for(int j = 0; j < 5 ; j++){
+            
+                printf("%5d", num[i][j]);
+    }
+                    printf("\n");
+}
+    printf("Pares:\n");
+    soma = 0;
+      for(int i = 0; i < 5 ; i++){
+        for(int j = 0; j < 5 ; j++){
+             
+             soma = i + j;   
+                
+                if(soma % 2 == 0){
+                
+                printf("%5d", num[i][j]);
+                
+                    
+                    
+                }
+    }
+                    printf("\n");
+}
+
+
+}
