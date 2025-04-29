@@ -1,0 +1,32 @@
+/*
+
+leia valores para uma matriz inteira (10,10) e escreva todos os
+elementos exceto os elementos da diagonal secundária.
+
+*/
+
+#include<stdio.h>
+
+
+int main(){
+
+int num[10][10];
+int tam = 10;
+
+    for(int i = 0; i < 10 ; i++){
+        for(int j = 0; j < 10 ; j++){
+
+            num[i][j] = i * 10 + j;
+        }
+    }
+
+       for(int i = 0; i < 10 ; i++){
+        for(int j = 0; j < 10 ; j++){
+
+            if(i + j == tam -1){
+                printf("%d %d \n", i, j );
+            }
+
+    }
+}
+}
