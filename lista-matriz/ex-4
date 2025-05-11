@@ -1,0 +1,49 @@
+/*
+*Faça uma função booleana que receba uma string e identifique se ela
+é um palíndromo (ex: “RADAR” e “SAIAS” são palíndromos).
+ *
+ */
+
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+
+bool eh_palindromo(char string[], char string_copiada[]) {
+    int tamanho;
+    int j = 0;
+    tamanho = strlen(string_copiada);
+    printf("Tamanho = %d\n", tamanho);
+    int  i = tamanho;
+    for ( i  ; i >= 0; i--) {
+
+        printf("%c", string[i]);
+        string_copiada[j] = string_copiada[i];
+        j++;
+    }
+    int comparacao;
+   comparacao = strcmp (string_copiada, string_copiada);
+    if (comparacao == 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+
+}
+
+
+
+
+int main() {
+    char string[16],string_copiada[16];
+
+
+        printf("Digite n valores:");
+        scanf("%s", string);
+
+ strcpy(string_copiada, string);
+
+eh_palindromo(string , string_copiada);
+}
